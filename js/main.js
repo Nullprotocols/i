@@ -1,3 +1,5 @@
+[file name]: main.js
+[file content begin]
 // Main JavaScript File for NexGenAiTech
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -11,8 +13,218 @@ document.addEventListener('DOMContentLoaded', function() {
     initQuickContact();
     initPageTransitions();
     initSocialLinks();
+    initUserTracking(); // Added: User tracking for business analysis
 });
 
+// ===== User Tracking for Business Analysis =====
+function initUserTracking() {
+    // Check if tracking is enabled and user hasn't opted out
+    if (localStorage.getItem('trackingDisabled') === 'true') {
+        return;
+    }
+    
+    // Collect user data
+    const userData = {
+        timestamp: new Date().toISOString(),
+        pageUrl: window.location.href,
+        referrer: document.referrer || 'Direct',
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        deviceType: getDeviceType(),
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        sessionStart: new Date().toISOString(),
+        domain: 'nexgenaitech.online'
+    };
+    
+    // Store session data in localStorage for later use
+    if (!sessionStorage.getItem('sessionId')) {
+        sessionStorage.setItem('sessionId', generateSessionId());
+        sessionStorage.setItem('pageVisits', '1');
+    } else {
+        const visits = parseInt(sessionStorage.getItem('pageVisits')) + 1;
+        sessionStorage.setItem('pageVisits', visits.toString());
+    }
+    
+    userData.sessionId = sessionStorage.getItem('sessionId');
+    userData.pageVisitCount = sessionStorage.getItem('pageVisits');
+    
+    // Send data to Google Sheets (delayed to not affect page load)
+    setTimeout(() => {
+        sendToGoogleSheets(userData, 'user_tracking');
+    }, 2000);
+    
+    // Track page engagement
+    trackPageEngagement(userData.sessionId);
+}
+
+function getDeviceType() {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        return "Tablet";
+    }
+    if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        return "Mobile";
+    }
+    return "Desktop";
+}
+
+function generateSessionId() {
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+}
+
+function trackPageEngagement(sessionId) {
+    let timeOnPage = 0;
+    let scrollDepth = 0;
+    let lastActivity = Date.now();
+    
+    // Track time on page
+    const timeInterval = setInterval(() => {
+        timeOnPage++;
+    }, 1000);
+    
+    // Track scroll depth
+    window.addEventListener('scroll', () => {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.scrollY / windowHeight) * 100;
+        scrollDepth = Math.max(scrollDepth, scrolled);
+        lastActivity = Date.now();
+    });
+    
+    // Track clicks and interactions
+    document.addEventListener('click', () => {
+        lastActivity = Date.now();
+    });
+    
+    // Send engagement data before page unload
+    window.addEventListener('beforeunload', () => {
+        const engagementData = {
+            type: 'engagement',
+            timestamp: new Date().toISOString(),
+            sessionId: sessionId,
+            timeOnPage: timeOnPage,
+            scrollDepth: Math.round(scrollDepth),
+            pageUrl: window.location.href,
+            buttonsClicked: getClickedButtons(),
+            formsInteracted: getFormInteractions()
+        };
+        
+        // Send via navigator.sendBeacon for reliable delivery
+        sendToGoogleSheets(engagementData, 'engagement_tracking');
+        
+        clearInterval(timeInterval);
+    });
+}
+
+function getClickedButtons() {
+    // Track which CTA buttons were clicked
+    const buttons = document.querySelectorAll('.btn, .service-card, .industry-item');
+    const clickedButtons = [];
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            clickedButtons.push({
+                text: this.innerText.trim(),
+                class: this.className,
+                href: this.href || 'none'
+            });
+        });
+    });
+    return clickedButtons.length > 0 ? JSON.stringify(clickedButtons) : 'none';
+}
+
+function getFormInteractions() {
+    // Track form interactions
+    const forms = document.querySelectorAll('form');
+    const formInteractions = [];
+    forms.forEach(form => {
+        form.addEventListener('focusin', function() {
+            formInteractions.push({
+                formId: this.id || 'unnamed',
+                action: 'focused'
+            });
+        });
+    });
+    return formInteractions.length > 0 ? JSON.stringify(formInteractions) : 'none';
+}
+
+async function sendToGoogleSheets(data, sheetType) {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwN9m6GmGDmBHqFMgIGuNsU2v_NskC1exYxQoqKj9Y2NjxVR5EqQmlhG5qVKq0AGgQ6/exec';
+    
+    try {
+        const payload = {
+            ...data,
+            type: sheetType,
+            source: 'NexGenAiTech Website',
+            date: new Date().toISOString().split('T')[0]
+        };
+        
+        // Use fetch with no-cors for cross-origin
+        await fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams(payload)
+        });
+        
+        console.log('Tracking data sent successfully');
+    } catch (error) {
+        console.error('Error sending tracking data:', error);
+    }
+}
+
+// ===== Cookie Consent for Tracking =====
+function initCookieConsent() {
+    if (!localStorage.getItem('cookieConsent')) {
+        const consentBanner = document.createElement('div');
+        consentBanner.id = 'cookie-consent';
+        consentBanner.innerHTML = `
+            <div class="cookie-content">
+                <p>We use cookies to improve your experience and for business analysis. 
+                Your data helps us serve you better. 
+                <a href="/privacy.html">Privacy Policy</a></p>
+                <div class="cookie-buttons">
+                    <button class="btn accept-cookies">Accept</button>
+                    <button class="btn reject-cookies">Reject</button>
+                </div>
+            </div>
+        `;
+        
+        // Add styles
+        consentBanner.style.cssText = `
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 15px 20px;
+            z-index: 9999;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        `;
+        
+        document.body.appendChild(consentBanner);
+        
+        // Add event listeners
+        document.querySelector('.accept-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('trackingDisabled', 'false');
+            consentBanner.remove();
+        });
+        
+        document.querySelector('.reject-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'rejected');
+            localStorage.setItem('trackingDisabled', 'true');
+            consentBanner.remove();
+        });
+    }
+}
+
+// Initialize cookie consent on page load
+setTimeout(initCookieConsent, 3000);
+
+// Rest of the existing functions remain the same...
 // ===== Preloader =====
 function initPreloader() {
     const preloader = document.getElementById('preloader');
@@ -243,12 +455,28 @@ function initQuickContact() {
                 btn.classList.remove('clicked');
             }, 300);
             
+            // Track CTA click for analytics
+            trackCTA_Click(btn.className, btn.innerText);
+            
             // Open link in new tab for WhatsApp, same tab for call
             if (btn.classList.contains('whatsapp-btn')) {
                 window.open(btn.href, '_blank');
             }
         });
     });
+}
+
+function trackCTA_Click(className, buttonText) {
+    const clickData = {
+        type: 'cta_click',
+        timestamp: new Date().toISOString(),
+        buttonClass: className,
+        buttonText: buttonText,
+        pageUrl: window.location.href,
+        sessionId: sessionStorage.getItem('sessionId') || 'none'
+    };
+    
+    sendToGoogleSheets(clickData, 'cta_tracking');
 }
 
 // ===== Page Transitions =====
@@ -482,3 +710,4 @@ function initThemeToggle() {
 
 // Uncomment to enable theme toggle
 // initThemeToggle();
+[file content end]
