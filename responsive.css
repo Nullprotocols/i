@@ -1,0 +1,441 @@
+/* ===== Responsive Design ===== */
+
+/* Large Desktops (1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Desktops (1200px to 1399px) */
+@media (max-width: 1399.98px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.2rem; }
+    h3 { font-size: 1.6rem; }
+    
+    .section-title {
+        font-size: 2.4rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Tablets (768px to 991px) */
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .section-padding {
+        padding: 80px 0;
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--dark-color);
+        flex-direction: column;
+        padding: var(--space-xl);
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 20px 0;
+        font-size: 1.1rem;
+    }
+    
+    .nav-cta {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .mobile-toggle {
+        display: flex;
+    }
+    
+    .mobile-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .mobile-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* About Grid */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .about-image {
+        height: 300px;
+    }
+    
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Industries Grid */
+    .industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    /* Quick Contact */
+    .quick-contact {
+        bottom: 80px;
+        right: 20px;
+    }
+}
+
+/* Mobile Devices (576px to 767px) */
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 540px;
+        padding: 0 20px;
+    }
+    
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.4rem; }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Industries */
+    .industries-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* CTA */
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-col {
+        padding-right: 0;
+    }
+}
+
+/* Small Mobile Devices (575px and below) */
+@media (max-width: 575.98px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.6rem; }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Hero */
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    
+    /* About */
+    .about-buttons {
+        flex-direction: column;
+    }
+    
+    .about-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Cards */
+    .service-card,
+    .industry-item {
+        padding: 25px 20px;
+    }
+    
+    /* Quick Contact */
+    .quick-contact {
+        bottom: 70px;
+        right: 15px;
+    }
+    
+    .whatsapp-btn,
+    .call-btn,
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Very Small Mobile Devices (375px and below) */
+@media (max-width: 375px) {
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .feature-item {
+        font-size: 0.9rem;
+    }
+    
+    .footer-links a,
+    .contact-item span {
+        font-size: 0.85rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .preloader,
+    .quick-contact,
+    .back-to-top,
+    .mobile-toggle,
+    .nav-cta {
+        display: none !important;
+    }
+    
+    .header {
+        position: static;
+        background: white !important;
+        color: black !important;
+    }
+    
+    body {
+        color: black;
+        background: white;
+    }
+    
+    .btn {
+        border: 1px solid black !important;
+        color: black !important;
+        background: white !important;
+    }
+    
+    .footer {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #0055aa;
+        --secondary-color: #008855;
+        --accent-color: #aa0000;
+    }
+    
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--dark-color);
+        color: var(--light-gray);
+    }
+}
+
+/* Landscape Orientation */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 100px 0 60px;
+    }
+    
+    .preloader-content {
+        transform: scale(0.8);
+    }
+    
+    .mobile-menu.active {
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover,
+    .nav-link:hover,
+    .social-links a:hover {
+        transform: none;
+    }
+    
+    .service-card:hover,
+    .industry-item:hover {
+        transform: none;
+    }
+    
+    /* Increase touch targets */
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        padding: 15px 0;
+    }
+    
+    .social-links a {
+        width: 44px;
+        height: 44px;
+    }
+}

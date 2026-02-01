@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | AI Development, Web & Mobile App Development</title>
+    <meta name="description" content="Professional AI Development, Web Development, Mobile App Development, SaaS Solutions, and UI/UX Design services by NexGenAiTech.">
+    <meta name="keywords" content="AI Development Services, Web Development, Mobile App Development, SaaS Solutions, UI/UX Design, Full-Stack Development">
+    <meta name="author" content="Jahid Ansari - NexGenAiTech">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nexgenaitech.online/services.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Our Services | AI Development, Web & Mobile App Development">
+    <meta property="og:description" content="Professional AI Development, Web Development, Mobile App Development services">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nexgenaitech.online/services.html">
+    <meta property="og:image" content="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Services - NexGenAiTech">
+    <meta name="twitter:description" content="AI Development, Web & Mobile App Development services">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "AI Development, Web Development, Mobile App Development",
+        "provider": {
+            "@type": "Organization",
+            "name": "NexGenAiTech"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "India"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Page Specific CSS -->
+    <style>
+        /* Services Page Specific Styles */
+        .services-hero {
+            background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(0,77,153,0.1) 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%230066cc" opacity="0.1"/></svg>') repeat;
+            animation: float 20s infinite linear;
+        }
+        
+        .services-main {
+            padding: 80px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .service-main-card {
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            transition: all var(--transition-normal);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-main-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-main-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-main-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon-large {
+            width: 80px;
+            height: 80px;
+            background: rgba(0,102,204,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: var(--primary-color);
+            font-size: 2rem;
+            transition: all var(--transition-normal);
+        }
+        
+        .service-main-card:hover .service-icon-large {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: rotate(15deg) scale(1.1);
+        }
+        
+        .service-feature-list {
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .feature-item {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-item i {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        .service-detail-section {
+            padding: 100px 0;
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            margin: 60px 0;
+        }
+        
+        .detail-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+        
+        .detail-tab {
+            background: var(--dark-color);
+            border: 1px solid var(--dark-gray);
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            font-weight: 500;
+            color: var(--light-gray);
+        }
+        
+        .detail-tab:hover,
+        .detail-tab.active {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .detail-content {
+            display: none;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        .detail-content.active {
+            display: block;
+        }
+        
+        .detail-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .detail-category {
+            display: inline-block;
+            background: rgba(0,102,204,0.1);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .detail-feature {
+            background: var(--dark-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .detail-feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .tech-stack-section {
+            margin: 60px 0;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .tech-item {
+            background: var(--dark-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-5px);
+            background: var(--primary-color);
+        }
+        
+        .tech-item:hover .tech-icon {
+            color: var(--white);
+        }
+        
+        .tech-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            transition: all var(--transition-normal);
+        }
+        
+        .process-steps {
+            margin: 60px 0;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: var(--dark-color);
+            border-radius: var(--border-radius);
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .step-connector {
+            position: absolute;
+            left: 85px;
+            top: 90px;
+            width: 2px;
+            height: 40px;
+            background: var(--primary-color);
+            opacity: 0.3;
+        }
+        
+        .process-step:last-child .step-connector {
+            display: none;
+        }
+        
+        .pricing-section {
+            background: var(--dark-color);
+            border-radius: var(--border-radius);
+            padding: 60px;
+            margin: 80px 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all var(--transition-normal);
+        }
+        
+        .pricing-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-10px);
+        }
+        
+        .pricing-card.popular {
+            position: relative;
+            border-color: var(--primary-color);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 20px 0;
+        }
+        
+        .price-period {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: var(--light-gray);
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .pricing-features .fa-times {
+            color: var(--light-gray);
+        }
+        
+        .service-faq {
+            margin: 80px 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--white);
+        }
+        
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all var(--transition-normal);
+            color: var(--light-gray);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 30px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-icon {
+            transition: transform var(--transition-normal);
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .cta-service {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            border-radius: var(--border-radius);
+            padding: 80px 60px;
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        /* Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .services-hero {
+                padding: 80px 0;
+            }
+            
+            .services-main {
+                padding: 60px 0;
+            }
+            
+            .service-detail-section {
+                padding: 60px 30px;
+            }
+            
+            .detail-tabs {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 10px;
+                justify-content: flex-start;
+            }
+            
+            .detail-tab {
+                white-space: nowrap;
+            }
+            
+            .pricing-section {
+                padding: 40px 30px;
+            }
+            
+            .cta-service {
+                padding: 60px 30px;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-connector {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-service {
+                padding: 50px 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .service-main-card {
+                padding: 30px 20px;
+            }
+            
+            .pricing-card {
+                padding: 30px 20px;
+            }
+            
+            .price-amount {
+                font-size: 2.5rem;
+            }
+            
+            .detail-tab {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="logo-pulse">
+                <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" style="width: 80px; height: 80px; border-radius: 50%;">
+            </div>
+            <h3 class="preloader-text">NexGenAiTech</h3>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" class="logo-img">
+                    <span class="logo-text">NexGenAiTech</span>
+                </a>
+                
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="industries.html" class="nav-link">Industries</a></li>
+                        <li class="nav-item"><a href="process.html" class="nav-link">Process</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <a href="contact.html" class="nav-cta">Get Quote</a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="page-hero-content animate-on-scroll">
+                <h1 class="page-title">Our <span class="highlight">Services</span></h1>
+                <p class="page-subtitle">Comprehensive AI and Full-Stack Development solutions to transform your digital presence</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Services</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-main section-padding">
+        <div class="container">
+            <div class="section-header text-center animate-on-scroll">
+                <h2 class="section-title">What We <span class="highlight">Offer</span></h2>
+                <p class="section-subtitle">End-to-end digital solutions tailored to your business needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- AI & ML -->
+                <div class="service-main-card animate-on-scroll" id="ai-service">
+                    <div class="service-icon-large">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="service-title">AI & Machine Learning</h3>
+                    <p class="service-description">Intelligent solutions powered by artificial intelligence and machine learning algorithms</p>
+                    
+                    <div class="service-feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Predictive Analytics</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Natural Language Processing</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Recommendation Systems</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-cta-btn">
+                        <button class="btn btn-primary btn-sm view-detail" data-target="ai">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Web Development -->
+                <div class="service-main-card animate-on-scroll" data-delay="0.1" id="web-service">
+                    <div class="service-icon-large">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">Modern, responsive websites and web applications using latest technologies</p>
+                    
+                    <div class="service-feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Responsive Websites</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>E-commerce Platforms</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Web Applications</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>API Integration</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-cta-btn">
+                        <button class="btn btn-primary btn-sm view-detail" data-target="web">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Mobile App Development -->
+                <div class="service-main-card animate-on-scroll" data-delay="0.2" id="mobile-service">
+                    <div class="service-icon-large">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">Mobile App Development</h3>
+                    <p class="service-description">Native and cross-platform mobile applications for iOS and Android</p>
+                    
+                    <div class="service-feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>iOS Apps</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Android Apps</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Cross-Platform</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>App Store Deployment</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-cta-btn">
+                        <button class="btn btn-primary btn-sm view-detail" data-target="mobile">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="service-detail-section">
+        <div class="container">
+            <div class="detail-tabs" id="serviceTabs">
+                <button class="detail-tab active" data-target="ai">AI & Machine Learning</button>
+                <button class="detail-tab" data-target="web">Web Development</button>
+                <button class="detail-tab" data-target="mobile">Mobile App Development</button>
+                <button class="detail-tab" data-target="saas">SaaS Solutions</button>
+                <button class="detail-tab" data-target="enterprise">Enterprise Software</button>
+                <button class="detail-tab" data-target="ui">UI/UX Design</button>
+            </div>
+            
+            <!-- AI & ML Detail -->
+            <div class="detail-content active" id="ai-detail">
+                <div class="detail-header animate-on-scroll">
+                    <span class="detail-category">AI Development</span>
+                    <h2 class="section-title">AI & Machine Learning Solutions</h2>
+                    <p class="section-subtitle">Harness the power of artificial intelligence to transform your business operations</p>
+                </div>
+                
+                <div class="detail-grid animate-on-scroll">
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>Predictive Analytics</h4>
+                        <p>Forecast trends and make data-driven decisions with advanced predictive models</p>
+                    </div>
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4>Computer Vision</h4>
+                        <p>Image and video analysis for object detection, facial recognition, and more</p>
+                    </div>
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h4>Natural Language Processing</h4>
+                        <p>Text analysis, sentiment analysis, chatbots, and language translation</p>
+                    </div>
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Recommendation Systems</h4>
+                        <p>Personalized recommendations for e-commerce, content, and services</p>
+                    </div>
+                </div>
+                
+                <div class="tech-stack-section">
+                    <h3 class="section-subtitle">Our AI Tech Stack</h3>
+                    <div class="tech-grid animate-on-scroll">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <span>TensorFlow</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <span>OpenAI API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-steps">
+                    <h3 class="section-subtitle">AI Development Process</h3>
+                    <div class="process-step animate-on-scroll">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Data Collection & Analysis</h4>
+                            <p>Gather and preprocess relevant data for model training</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="process-step animate-on-scroll" data-delay="0.1">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Model Selection & Training</h4>
+                            <p>Choose appropriate algorithms and train models on your data</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="process-step animate-on-scroll" data-delay="0.2">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Testing & Validation</h4>
+                            <p>Validate model performance and fine-tune parameters</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="process-step animate-on-scroll" data-delay="0.3">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Deployment & Integration</h4>
+                            <p>Deploy models to production and integrate with your systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web Development Detail -->
+            <div class="detail-content" id="web-detail">
+                <div class="detail-header animate-on-scroll">
+                    <span class="detail-category">Web Development</span>
+                    <h2 class="section-title">Web Development Services</h2>
+                    <p class="section-subtitle">Modern, responsive websites and web applications using latest technologies</p>
+                </div>
+                
+                <div class="detail-grid animate-on-scroll">
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h4>Responsive Design</h4>
+                        <p>Websites that work perfectly on all devices and screen sizes</p>
+                    </div>
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>E-commerce Solutions</h4>
+                        <p>Complete online stores with payment integration and inventory management</p>
+                    </div>
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Custom Web Apps</h4>
+                        <p>Tailored web applications for your specific business needs</p>
+                    </div>
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Performance Optimization</h4>
+                        <p>Fast loading times and optimized performance for better user experience</p>
+                    </div>
+                </div>
+                
+                <div class="tech-stack-section">
+                    <h3 class="section-subtitle">Web Development Stack</h3>
+                    <div class="tech-grid animate-on-scroll">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span>HTML5/CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span>React.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile App Development Detail -->
+            <div class="detail-content" id="mobile-detail">
+                <div class="detail-header animate-on-scroll">
+                    <span class="detail-category">Mobile Development</span>
+                    <h2 class="section-title">Mobile App Development</h2>
+                    <p class="section-subtitle">Native and cross-platform mobile applications for iOS and Android</p>
+                </div>
+                
+                <div class="detail-grid animate-on-scroll">
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <h4>iOS Development</h4>
+                        <p>Native iOS applications using Swift and modern Apple frameworks</p>
+                    </div>
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <h4>Android Development</h4>
+                        <p>Native Android applications using Kotlin and Java</p>
+                    </div>
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fas fa-mobile"></i>
+                        </div>
+                        <h4>Cross-Platform</h4>
+                        <p>Single codebase applications using React Native and Flutter</p>
+                    </div>
+                    <div class="detail-feature">
+                        <div class="detail-feature-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h4>App Store Deployment</h4>
+                        <p>Complete deployment to Google Play Store and Apple App Store</p>
+                    </div>
+                </div>
+                
+                <div class="tech-stack-section">
+                    <h3 class="section-subtitle">Mobile Development Stack</h3>
+                    <div class="tech-grid animate-on-scroll">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-swift"></i>
+                            </div>
+                            <span>Swift</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <span>Kotlin</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span>React Native</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <span>Flutter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional service details would be added similarly -->
+            
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header text-center animate-on-scroll">
+                <h2 class="section-title">Flexible <span class="highlight">Pricing</span></h2>
+                <p class="section-subtitle">Choose the plan that fits your business needs</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card animate-on-scroll">
+                    <h3 class="pricing-title">Basic</h3>
+                    <div class="price-amount">₹15,000</div>
+                    <div class="price-period">Per Project</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Basic Website Development</li>
+                        <li><i class="fas fa-check"></i> 5 Pages</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> 1 Month Support</li>
+                        <li><i class="fas fa-times"></i> Custom Features</li>
+                        <li><i class="fas fa-times"></i> Advanced SEO</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Get Started</a>
+                </div>
+                
+                <div class="pricing-card popular animate-on-scroll" data-delay="0.1">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3 class="pricing-title">Professional</h3>
+                    <div class="price-amount">₹50,000</div>
+                    <div class="price-period">Per Project</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Custom Web Application</li>
+                        <li><i class="fas fa-check"></i> 15+ Pages</li>
+                        <li><i class="fas fa-check"></i> Database Integration</li>
+                        <li><i class="fas fa-check"></i> 6 Months Support</li>
+                        <li><i class="fas fa-check"></i> Custom Features</li>
+                        <li><i class="fas fa-check"></i> Basic SEO</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+                
+                <div class="pricing-card animate-on-scroll" data-delay="0.2">
+                    <h3 class="pricing-title">Enterprise</h3>
+                    <div class="price-amount">Custom</div>
+                    <div class="price-period">Contact for Quote</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Full-Stack Solution</li>
+                        <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                        <li><i class="fas fa-check"></i> AI Integration</li>
+                        <li><i class="fas fa-check"></i> 1 Year Support</li>
+                        <li><i class="fas fa-check"></i> Advanced Features</li>
+                        <li><i class="fas fa-check"></i> Complete SEO</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="service-faq">
+        <div class="container">
+            <div class="section-header text-center animate-on-scroll">
+                <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+                <p class="section-subtitle">Find answers to common questions about our services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>What is your typical project timeline?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary based on complexity. A basic website takes 2-3 weeks, web applications 4-8 weeks, and complex AI projects 8-12 weeks. We provide detailed timelines after requirement analysis.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll" data-delay="0.1">
+                    <div class="faq-question">
+                        <span>Do you provide ongoing maintenance?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer maintenance packages starting from ₹5,000/month. This includes updates, security patches, backups, and 24/7 monitoring. Custom packages are available based on your needs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll" data-delay="0.2">
+                    <div class="faq-question">
+                        <span>What technologies do you work with?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We work with modern technologies including React, Node.js, Python, TensorFlow, Flutter, AWS, and more. We choose the best stack for your specific project requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll" data-delay="0.3">
+                    <div class="faq-question">
+                        <span>Can you work with existing codebases?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We can analyze, improve, and extend your existing codebase. We also offer code audits and refactoring services to improve performance and maintainability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-service">
+        <div class="container">
+            <div class="cta-content text-center animate-on-scroll">
+                <h2 class="cta-title">Ready to Start Your Project?</h2>
+                <p class="cta-subtitle">Get a free consultation and project estimate within 24 hours</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-light">
+                        <span>Get Free Quote</span>
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                    <a href="tel:+918055698328" class="btn btn-outline-light">
+                        <span>Call Now</span>
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" class="logo-img" style="width: 40px; height: 40px; border-radius: 50%;">
+                        <span class="logo-text">NexGenAiTech</span>
+                    </a>
+                    <p class="footer-about">Building Intelligent Digital Solutions for the Future. Empowering businesses through AI-driven innovation.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/nexgenaitech-jahid-ansari-99baa234a?trk=contact-info" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61587253195088&sk=directory_links" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/nexgenaitech_official" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Vb5YI1bJP213jsWV9w01" target="_blank" aria-label="WhatsApp Channel"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#ai-service">AI Development</a></li>
+                        <li><a href="services.html#web-service">Web Development</a></li>
+                        <li><a href="services.html#mobile-service">Mobile Apps</a></li>
+                        <li><a href="#saas">SaaS Solutions</a></li>
+                        <li><a href="#ui">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>nexgenaitech7@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8055698328</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kushinagar, Uttar Pradesh, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexGenAiTech. All rights reserved. | Founded by Jahid Ansari</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Quick Contact -->
+    <div class="quick-contact">
+        <a href="https://wa.me/918055698328" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+918055698328" class="call-btn" aria-label="Call us">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        // Service Tabs Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.detail-tab');
+            const contents = document.querySelectorAll('.detail-content');
+            const viewDetailBtns = document.querySelectorAll('.view-detail');
+            
+            // Tab switching
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.getAttribute('data-target');
+                    
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    // Show corresponding content
+                    contents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === `${target}-detail`) {
+                            content.classList.add('active');
+                            
+                            // Scroll to content
+                            setTimeout(() => {
+                                content.scrollIntoView({ 
+                                    behavior: 'smooth', 
+                                    block: 'start',
+                                    inline: 'nearest'
+                                });
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // View detail buttons
+            viewDetailBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const target = btn.getAttribute('data-target');
+                    
+                    // Find and click corresponding tab
+                    tabs.forEach(tab => {
+                        if (tab.getAttribute('data-target') === target) {
+                            tab.click();
+                        }
+                    });
+                });
+            });
+            
+            // FAQ functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

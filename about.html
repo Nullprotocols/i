@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About NexGenAiTech | AI & Full-Stack Development Company</title>
+    <meta name="description" content="Learn about NexGenAiTech, founded by Jahid Ansari. Discover our mission, values, team, and expertise in AI and Full-Stack Development.">
+    <meta name="keywords" content="About NexGenAiTech, Jahid Ansari, AI Company, Full-Stack Development, Our Mission, Our Team">
+    <meta name="author" content="Jahid Ansari - NexGenAiTech">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nexgenaitech.online/about.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="About NexGenAiTech | AI & Full-Stack Development Company">
+    <meta property="og:description" content="Learn about NexGenAiTech, our mission, values, and expertise in AI development">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nexgenaitech.online/about.html">
+    <meta property="og:image" content="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About NexGenAiTech">
+    <meta name="twitter:description" content="Learn about our AI & Full-Stack Development company">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About NexGenAiTech",
+        "description": "AI & Full-Stack Development Company",
+        "publisher": {
+            "@type": "Organization",
+            "name": "NexGenAiTech",
+            "url": "https://nexgenaitech.online"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Page Specific CSS -->
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(0,77,153,0.1) 100%);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%230066cc" opacity="0.1"/></svg>') repeat;
+            animation: float 20s infinite linear;
+        }
+        
+        .page-hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .page-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--light-gray);
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--light-gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+        }
+        
+        .breadcrumb .separator {
+            opacity: 0.5;
+        }
+        
+        .story-section {
+            padding: 100px 0;
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .story-image {
+            position: relative;
+        }
+        
+        .timeline-visual {
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            padding: 40px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            min-width: 80px;
+        }
+        
+        .mvv-section {
+            padding: 100px 0;
+        }
+        
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .mvv-card {
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all var(--transition-normal);
+        }
+        
+        .mvv-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mvv-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(0,102,204,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: var(--primary-color);
+            font-size: 2rem;
+            transition: all var(--transition-normal);
+        }
+        
+        .mvv-card:hover .mvv-icon {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: rotate(15deg);
+        }
+        
+        .founder-section {
+            padding: 100px 0;
+        }
+        
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .founder-image {
+            position: relative;
+        }
+        
+        .image-wrapper {
+            position: relative;
+        }
+        
+        .founder-avatar {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        
+        .avatar-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            color: var(--white);
+        }
+        
+        .avatar-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+            border: 4px solid var(--dark-color);
+        }
+        
+        .founder-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--dark-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: all var(--transition-normal);
+        }
+        
+        .social-link:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .section-label {
+            display: inline-block;
+            background: rgba(0,102,204,0.1);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .founder-name {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .founder-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        
+        .founder-bio {
+            margin-bottom: 40px;
+        }
+        
+        .founder-bio p {
+            margin-bottom: 20px;
+        }
+        
+        .founder-expertise {
+            margin-bottom: 40px;
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .expertise-item {
+            background: var(--dark-gray);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+        
+        .expertise-item:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .expertise-item i {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .expertise-item:hover i {
+            color: var(--white);
+        }
+        
+        .why-choose {
+            padding: 100px 0;
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .why-card {
+            display: flex;
+            gap: 25px;
+            padding: 40px;
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all var(--transition-normal);
+        }
+        
+        .why-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .why-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            opacity: 0.3;
+            min-width: 60px;
+        }
+        
+        .team-section {
+            padding: 100px 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .team-card {
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .team-avatar {
+            margin-bottom: 25px;
+        }
+        
+        .avatar-circle {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--white);
+        }
+        
+        .team-name {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .team-role {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .team-bio {
+            color: var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        .team-skills {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .skill-tag {
+            background: rgba(0,102,204,0.1);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .stats-section {
+            padding: 100px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-icon {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 991px) {
+            .story-grid,
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-title {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero {
+                padding: 80px 0;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .mvv-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .founder-avatar {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .founder-name {
+                font-size: 2.5rem;
+            }
+            
+            .why-card {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .expertise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="logo-pulse">
+                <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" style="width: 80px; height: 80px; border-radius: 50%;">
+            </div>
+            <h3 class="preloader-text">NexGenAiTech</h3>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" class="logo-img">
+                    <span class="logo-text">NexGenAiTech</span>
+                </a>
+                
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="industries.html" class="nav-link">Industries</a></li>
+                        <li class="nav-item"><a href="process.html" class="nav-link">Process</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <a href="contact.html" class="nav-cta">Get Quote</a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content animate-on-scroll">
+                <h1 class="page-title">About <span class="highlight">NexGenAiTech</span></h1>
+                <p class="page-subtitle">Driving digital transformation through AI-powered innovation and cutting-edge technology solutions</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">About Us</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="story-section section-padding">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content animate-on-scroll">
+                    <h2 class="section-title">Our <span class="highlight">Story</span></h2>
+                    <p class="story-text">Founded in 2024 by <strong>Jahid Ansari</strong>, NexGenAiTech emerged from a simple yet powerful vision: to bridge the gap between cutting-edge artificial intelligence and practical business applications.</p>
+                    <p class="story-text">What started as a passion project has evolved into a full-service AI and Full-Stack Development company, serving clients across India and globally.</p>
+                    <p class="story-text">We believe that technology should be an enabler, not a barrier. Our approach combines technical expertise with business understanding to deliver solutions that drive real results.</p>
+                </div>
+                <div class="story-image animate-on-scroll" data-delay="0.2">
+                    <div class="timeline-visual">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-content">
+                                <h4>Foundation</h4>
+                                <p>NexGenAiTech founded by Jahid Ansari</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-content">
+                                <h4>Growth Phase</h4>
+                                <p>Served 50+ clients, expanded service offerings</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2026</div>
+                            <div class="timeline-content">
+                                <h4>Expansion</h4>
+                                <p>Global client base, advanced AI solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Vision Values -->
+    <section class="mvv-section section-padding bg-dark">
+        <div class="container">
+            <div class="section-header text-center animate-on-scroll">
+                <h2 class="section-title">Our Core <span class="highlight">Principles</span></h2>
+                <p class="section-subtitle">Guiding everything we do</p>
+            </div>
+            
+            <div class="mvv-grid">
+                <div class="mvv-card animate-on-scroll">
+                    <div class="mvv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="mvv-title">Mission</h3>
+                    <p class="mvv-description">To empower businesses with intelligent, scalable digital solutions that drive growth, efficiency, and competitive advantage through cutting-edge AI and full-stack development.</p>
+                </div>
+                
+                <div class="mvv-card animate-on-scroll" data-delay="0.1">
+                    <div class="mvv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="mvv-title">Vision</h3>
+                    <p class="mvv-description">To be the leading AI and technology partner for businesses worldwide, recognized for innovation, reliability, and transformative digital solutions.</p>
+                </div>
+                
+                <div class="mvv-card animate-on-scroll" data-delay="0.2">
+                    <div class="mvv-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="mvv-title">Values</h3>
+                    <p class="mvv-description">Innovation, Integrity, Excellence, Collaboration, and Client Success guide every project we undertake and every solution we deliver.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section section-padding">
+        <div class="container">
+            <div class="founder-grid">
+                <div class="founder-image animate-on-scroll">
+                    <div class="image-wrapper">
+                        <div class="founder-avatar">
+                            <div class="avatar-placeholder">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="avatar-badge">
+                                <i class="fas fa-award"></i>
+                            </div>
+                        </div>
+                        <div class="founder-social">
+                            <a href="https://www.linkedin.com/in/nexgenaitech-jahid-ansari-99baa234a?trk=contact-info" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61587253195088&sk=directory_links" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/nexgenaitech_official" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="founder-content animate-on-scroll" data-delay="0.2">
+                    <span class="section-label">Our Founder</span>
+                    <h2 class="founder-name">Jahid Ansari</h2>
+                    <p class="founder-title">Founder & Lead Developer</p>
+                    
+                    <div class="founder-bio">
+                        <p>With over 2 years of hands-on experience in AI and full-stack development, Jahid Ansari founded NexGenAiTech with a vision to bridge the gap between innovative technology and practical business solutions.</p>
+                        
+                        <p>His expertise spans across machine learning, web development, mobile applications, and cloud computing, enabling him to lead projects that deliver measurable business impact.</p>
+                    </div>
+                    
+                    <div class="founder-expertise">
+                        <h4>Areas of Expertise</h4>
+                        <div class="expertise-grid">
+                            <div class="expertise-item">
+                                <i class="fas fa-brain"></i>
+                                <span>AI & ML</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-code"></i>
+                                <span>Web Development</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile Apps</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-cloud"></i>
+                                <span>Cloud Solutions</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-database"></i>
+                                <span>Database Design</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Business Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="founder-cta">
+                        <a href="contact.html" class="btn btn-primary">
+                            <span>Work With Us</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose section-padding bg-dark">
+        <div class="container">
+            <div class="section-header text-center animate-on-scroll">
+                <h2 class="section-title">Why Choose <span class="highlight">NexGenAiTech</span></h2>
+                <p class="section-subtitle">What sets us apart in the competitive tech landscape</p>
+            </div>
+            
+            <div class="why-grid">
+                <div class="why-card animate-on-scroll">
+                    <div class="why-number">01</div>
+                    <div class="why-content">
+                        <h3>Cutting-edge Technology</h3>
+                        <p>We stay ahead of technology trends, implementing the latest frameworks and tools to ensure your solution is future-proof.</p>
+                    </div>
+                </div>
+                
+                <div class="why-card animate-on-scroll" data-delay="0.1">
+                    <div class="why-number">02</div>
+                    <div class="why-content">
+                        <h3>Client-Centric Approach</h3>
+                        <p>Your success is our priority. We work closely with you throughout the development process, ensuring alignment with your business goals.</p>
+                    </div>
+                </div>
+                
+                <div class="why-card animate-on-scroll" data-delay="0.2">
+                    <div class="why-number">03</div>
+                    <div class="why-content">
+                        <h3>Transparent Communication</h3>
+                        <p>Clear, honest communication at every stage. No hidden costs, no surprises—just straightforward project management.</p>
+                    </div>
+                </div>
+                
+                <div class="why-card animate-on-scroll" data-delay="0.3">
+                    <div class="why-number">04</div>
+                    <div class="why-content">
+                        <h3>Rapid Development</h3>
+                        <p>Agile methodologies ensure faster time-to-market without compromising on quality or security.</p>
+                    </div>
+                </div>
+                
+                <div class="why-card animate-on-scroll" data-delay="0.4">
+                    <div class="why-number">05</div>
+                    <div class="why-content">
+                        <h3>Cost-Effective Solutions</h3>
+                        <p>Maximum ROI through efficient development practices and scalable architecture that grows with your business.</p>
+                    </div>
+                </div>
+                
+                <div class="why-card animate-on-scroll" data-delay="0.5">
+                    <div class="why-number">06</div>
+                    <div class="why-content">
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock technical support and maintenance to keep your solutions running smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section section-padding">
+        <div class="container">
+            <div class="section-header text-center animate-on-scroll">
+                <h2 class="section-title">Meet Our <span class="highlight">Team</span></h2>
+                <p class="section-subtitle">The talented professionals behind our success</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card animate-on-scroll">
+                    <div class="team-avatar">
+                        <div class="avatar-circle">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Jahid Ansari</h3>
+                        <p class="team-role">Founder & Lead Developer</p>
+                        <p class="team-bio">AI/ML Expert, Full-Stack Developer with 2+ years experience</p>
+                    </div>
+                    <div class="team-skills">
+                        <span class="skill-tag">AI/ML</span>
+                        <span class="skill-tag">Web Dev</span>
+                        <span class="skill-tag">Cloud</span>
+                    </div>
+                </div>
+                
+                <div class="team-card animate-on-scroll" data-delay="0.1">
+                    <div class="team-avatar">
+                        <div class="avatar-circle">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">AI Development Team</h3>
+                        <p class="team-role">AI Specialists</p>
+                        <p class="team-bio">Experts in Machine Learning, Computer Vision, and NLP</p>
+                    </div>
+                    <div class="team-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                    </div>
+                </div>
+                
+                <div class="team-card animate-on-scroll" data-delay="0.2">
+                    <div class="team-avatar">
+                        <div class="avatar-circle">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Web Development Team</h3>
+                        <p class="team-role">Full-Stack Developers</p>
+                        <p class="team-bio">MERN Stack experts building scalable web applications</p>
+                    </div>
+                    <div class="team-skills">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section section-padding bg-gradient">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box animate-on-scroll">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number" data-count="2">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                
+                <div class="stat-box animate-on-scroll" data-delay="0.1">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                
+                <div class="stat-box animate-on-scroll" data-delay="0.2">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">Satisfied Clients</div>
+                </div>
+                
+                <div class="stat-box animate-on-scroll" data-delay="0.3">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">Hours Support</div>
+                </div>
+                
+                <div class="stat-box animate-on-scroll" data-delay="0.4">
+                    <div class="stat-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="stat-number" data-count="1000">0</div>
+                    <div class="stat-label">Code Commits</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-content text-center animate-on-scroll">
+                <h2 class="cta-title">Ready to Build Something Amazing?</h2>
+                <p class="cta-subtitle">Let's discuss how we can transform your business with cutting-edge technology</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <span>Start Your Project</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="process.html" class="btn btn-outline">
+                        <span>Our Process</span>
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" class="logo-img" style="width: 40px; height: 40px; border-radius: 50%;">
+                        <span class="logo-text">NexGenAiTech</span>
+                    </a>
+                    <p class="footer-about">Building Intelligent Digital Solutions for the Future. Empowering businesses through AI-driven innovation.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/nexgenaitech-jahid-ansari-99baa234a?trk=contact-info" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61587253195088&sk=directory_links" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/nexgenaitech_official" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Vb5YI1bJP213jsWV9w01" target="_blank" aria-label="WhatsApp Channel"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#ai">AI Development</a></li>
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#mobile">Mobile Apps</a></li>
+                        <li><a href="services.html#saas">SaaS Solutions</a></li>
+                        <li><a href="services.html#ui">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>nexgenaitech7@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8055698328</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kushinagar, Uttar Pradesh, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexGenAiTech. All rights reserved. | Founded by Jahid Ansari</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Quick Contact -->
+    <div class="quick-contact">
+        <a href="https://wa.me/918055698328" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+918055698328" class="call-btn" aria-label="Call us">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

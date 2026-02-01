@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Development Process | Agile Methodology, Quality Assurance</title>
+    <meta name="description" content="Learn about NexGenAiTech's 6-step development process: Discovery, Design, Development, Testing, Deployment, and Maintenance.">
+    <meta name="keywords" content="Development Process, Agile Methodology, Software Development Lifecycle, Quality Assurance, Project Management">
+    <meta name="author" content="Jahid Ansari - NexGenAiTech">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nexgenaitech.online/process.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Our Development Process | Agile Methodology, Quality Assurance">
+    <meta property="og:description" content="6-step development process ensuring quality and timely delivery">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nexgenaitech.online/process.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Development Process - NexGenAiTech">
+    <meta name="twitter:description" content="6-step development process ensuring quality delivery">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "NexGenAiTech Development Process",
+        "description": "6-step software development process",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Discovery & Planning",
+                "text": "In-depth analysis of requirements and project planning"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "UI/UX Design",
+                "text": "Creating user-centered design and prototypes"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Page Specific CSS -->
+    <style>
+        .process-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .process-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,50 Q25,25 50,50 T100,50" stroke="white" stroke-width="0.5" fill="none" opacity="0.1"/></svg>') repeat;
+        }
+        
+        .process-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 0;
+        }
+        
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+            opacity: 0.3;
+        }
+        
+        .process-step {
+            position: relative;
+            margin-bottom: 100px;
+            width: 45%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .process-step.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .process-step:nth-child(odd) {
+            left: 0;
+            text-align: right;
+            padding-right: 80px;
+        }
+        
+        .process-step:nth-child(even) {
+            left: 55%;
+            text-align: left;
+            padding-left: 80px;
+        }
+        
+        .step-number {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            box-shadow: var(--shadow-lg);
+            z-index: 2;
+            transition: all var(--transition-normal);
+        }
+        
+        .process-step:nth-child(odd) .step-number {
+            right: -40px;
+        }
+        
+        .process-step:nth-child(even) .step-number {
+            left: -40px;
+        }
+        
+        .process-step:hover .step-number {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 10px 30px rgba(0,102,204,0.5);
+        }
+        
+        .step-content {
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all var(--transition-normal);
+        }
+        
+        .process-step:hover .step-content {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+        
+        .step-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .step-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .step-duration {
+            display: inline-block;
+            background: rgba(0,102,204,0.1);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .step-deliverables {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .deliverables-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .deliverables-list {
+            list-style: none;
+        }
+        
+        .deliverables-list li {
+            padding: 8px 0;
+            color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .deliverables-list i {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        .methodology-section {
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            padding: 80px 60px;
+            margin: 100px auto;
+            max-width: 1200px;
+        }
+        
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .methodology-card {
+            background: var(--dark-color);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+        
+        .methodology-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .methodology-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(0,102,204,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            transition: all var(--transition-normal);
+        }
+        
+        .methodology-card:hover .methodology-icon {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: rotate(360deg);
+        }
+        
+        .tools-section {
+            padding: 100px 0;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .tool-card {
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            background: var(--primary-color);
+        }
+        
+        .tool-card:hover .tool-icon {
+            color: var(--white);
+        }
+        
+        .tool-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: all var(--transition-normal);
+        }
+        
+        .qa-section {
+            background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(0,77,153,0.1) 100%);
+            padding: 100px 0;
+            border-radius: var(--border-radius);
+            margin: 100px 0;
+        }
+        
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .qa-card {
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .qa-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        
+        .timeline-section {
+            margin: 100px 0;
+        }
+        
+        .timeline-visual {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 60px;
+        }
+        
+        .timeline-visual::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-color);
+            opacity: 0.3;
+        }
+        
+        .timeline-milestone {
+            position: relative;
+            text-align: center;
+            flex: 1;
+        }
+        
+        .milestone-dot {
+            width: 30px;
+            height: 30px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .milestone-content {
+            background: var(--dark-gray);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 20px;
+        }
+        
+        .cta-process {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            border-radius: var(--border-radius);
+            margin: 100px 0;
+        }
+        
+        @media (max-width: 991px) {
+            .process-timeline::before {
+                left: 30px;
+            }
+            
+            .process-step {
+                width: 100%;
+                left: 0;
+                padding-left: 80px;
+                padding-right: 20px;
+                text-align: left;
+            }
+            
+            .process-step:nth-child(odd),
+            .process-step:nth-child(even) {
+                left: 0;
+                padding-right: 20px;
+                padding-left: 80px;
+                text-align: left;
+            }
+            
+            .process-step:nth-child(odd) .step-number,
+            .process-step:nth-child(even) .step-number {
+                left: 0;
+                right: auto;
+            }
+            
+            .methodology-section {
+                padding: 60px 30px;
+            }
+            
+            .timeline-visual {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .timeline-visual::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .process-hero {
+                padding: 80px 0;
+            }
+            
+            .step-content {
+                padding: 30px 20px;
+            }
+            
+            .methodology-section {
+                padding: 40px 20px;
+            }
+            
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .qa-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step {
+                padding-left: 60px;
+            }
+            
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="logo-pulse">
+                <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech" style="width: 80px; height: 80px; border-radius: 50%;">
+            </div>
+            <h3 class="preloader-text">NexGenAiTech</h3>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" class="logo-img">
+                    <span class="logo-text">NexGenAiTech</span>
+                </a>
+                
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="industries.html" class="nav-link">Industries</a></li>
+                        <li class="nav-item active"><a href="process.html" class="nav-link">Process</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <a href="contact.html" class="nav-cta">Get Quote</a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Process Hero -->
+    <section class="process-hero">
+        <div class="container">
+            <div class="page-hero-content animate-on-scroll">
+                <h1 class="page-title">Our Development <span class="highlight">Process</span></h1>
+                <p class="page-subtitle">A structured 6-step methodology ensuring quality, transparency, and timely delivery</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Our Process</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="process-timeline">
+        <div class="container">
+            <div class="process-step animate-on-scroll" id="step1">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <span class="step-duration">1-2 Weeks</span>
+                    <h2 class="step-title">Discovery & Planning</h2>
+                    <p class="step-description">We begin by thoroughly understanding your business goals, target audience, and technical requirements. This phase includes market research, competitor analysis, and creating a comprehensive project roadmap.</p>
+                    
+                    <div class="step-deliverables">
+                        <h3 class="deliverables-title">Deliverables</h3>
+                        <ul class="deliverables-list">
+                            <li><i class="fas fa-check"></i> Detailed Project Requirements Document</li>
+                            <li><i class="fas fa-check"></i> Technical Specification Document</li>
+                            <li><i class="fas fa-check"></i> Project Timeline & Milestones</li>
+                            <li><i class="fas fa-check"></i> Resource Allocation Plan</li>
+                            <li><i class="fas fa-check"></i> Risk Assessment Report</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step animate-on-scroll" id="step2" data-delay="0.1">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <span class="step-duration">2-3 Weeks</span>
+                    <h2 class="step-title">UI/UX Design</h2>
+                    <p class="step-description">Our design team creates intuitive, user-centered interfaces that enhance engagement and drive conversions. We focus on creating seamless user experiences across all devices and platforms.</p>
+                    
+                    <div class="step-deliverables">
+                        <h3 class="deliverables-title">Deliverables</h3>
+                        <ul class="deliverables-list">
+                            <li><i class="fas fa-check"></i> Wireframes & Prototypes</li>
+                            <li><i class="fas fa-check"></i> User Flow Diagrams</li>
+                            <li><i class="fas fa-check"></i> Visual Design Mockups</li>
+                            <li><i class="fas fa-check"></i> Style Guide & Design System</li>
+                            <li><i class="fas fa-check"></i> Interactive Prototypes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step animate-on-scroll" id="step3" data-delay="0.2">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="step-duration">4-8 Weeks</span>
+                    <h2 class="step-title">Development</h2>
+                    <p class="step-description">Using agile methodologies, our development team builds your solution with clean, maintainable code. We follow best practices and conduct regular code reviews to ensure quality.</p>
+                    
+                    <div class="step-deliverables">
+                        <h3 class="deliverables-title">Deliverables</h3>
+                        <ul class="deliverables-list">
+                            <li><i class="fas fa-check"></i> Weekly Progress Reports</li>
+                            <li><i class="fas fa-check"></i> Source Code Repository</li>
+                            <li><i class="fas fa-check"></i> API Documentation</li>
+                            <li><i class="fas fa-check"></i> Database Schema</li>
+                            <li><i class="fas fa-check"></i> Integration Modules</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step animate-on-scroll" id="step4" data-delay="0.3">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <span class="step-duration">2-3 Weeks</span>
+                    <h2 class="step-title">Testing & QA</h2>
+                    <p class="step-description">Rigorous testing for functionality, performance, security, and user experience. We conduct manual and automated testing across multiple devices and browsers.</p>
+                    
+                    <div class="step-deliverables">
+                        <h3 class="deliverables-title">Deliverables</h3>
+                        <ul class="deliverables-list">
+                            <li><i class="fas fa-check"></i> Test Cases & Reports</li>
+                            <li><i class="fas fa-check"></i> Bug Reports & Fixes</li>
+                            <li><i class="fas fa-check"></i> Performance Test Results</li>
+                            <li><i class="fas fa-check"></i> Security Audit Report</li>
+                            <li><i class="fas fa-check"></i> User Acceptance Testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step animate-on-scroll" id="step5" data-delay="0.4">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <span class="step-duration">1 Week</span>
+                    <h2 class="step-title">Deployment</h2>
+                    <p class="step-description">Smooth deployment to production with zero downtime. We ensure proper configuration, data migration, and integration with existing systems.</p>
+                    
+                    <div class="step-deliverables">
+                        <h3 class="deliverables-title">Deliverables</h3>
+                        <ul class="deliverables-list">
+                            <li><i class="fas fa-check"></i> Production Environment Setup</li>
+                            <li><i class="fas fa-check"></i> Deployment Documentation</li>
+                            <li><i class="fas fa-check"></i> User Training Materials</li>
+                            <li><i class="fas fa-check"></i> Backup & Recovery Plan</li>
+                            <li><i class="fas fa-check"></i> Go-live Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step animate-on-scroll" id="step6" data-delay="0.5">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <span class="step-duration">Ongoing</span>
+                    <h2 class="step-title">Support & Maintenance</h2>
+                    <p class="step-description">Ongoing maintenance, updates, and 24/7 support to ensure optimal performance. We provide regular updates and enhancements based on user feedback.</p>
+                    
+                    <div class="step-deliverables">
+                        <h3 class="deliverables-title">Deliverables</h3>
+                        <ul class="deliverables-list">
+                            <li><i class="fas fa-check"></i> 24/7 Technical Support</li>
+                            <li><i class="fas fa-check"></i> Regular Updates & Patches</li>
+                            <li><i class="fas fa-check"></i> Performance Monitoring</li>
+                            <li><i class="fas fa-check"></i> Security Updates</li>
+                            <li><i class="fas fa-check"></i> Feature Enhancements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="methodology-section">
+        <div class="container">
+            <div class="section-header text-center animate-on-scroll">
+                <h2 class="section-title">Our <span class="highlight">Methodology</span></h2>
+                <p class="section-subtitle">Agile practices that ensure transparency and quality</p>
+            </div>
+            
+            <div class="methodology-grid">
+                <div class="methodology-card animate-on-scroll">
+                    <div class="methodology-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="methodology-title">Agile Development</h3>
+                    <p class="methodology-description">Iterative development with regular client feedback and adaptive planning.</p>
+                </div>
+                
+                <div class="methodology-card animate-on-scroll" data-delay="0.1">
+                    <div class="methodology-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="methodology-title">Daily Standups</h3>
+                    <p class="methodology-description">Daily progress updates and issue resolution for transparent communication.</p>
+                </div>
+                
+                <div class="methodology-card animate-on-scroll" data-delay="0.2">
+                    <div class="methodology-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3 class="methodology-title">Sprint Planning</h3>
+                    <p class="methodology-description">Two-week sprints with clear goals and deliverables for each iteration.</p>
+                </div>
+                
+                <div class="methodology-card animate-on-scroll" data-delay="0.3">
+                    <div class="methodology-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="methodology-title">Continuous Integration</h3>
+                    <p class="methodology-description">Automated testing and deployment for faster, more reliable releases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Technologies -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="section-header text-center animate-on-scroll">
+                <h2 class="section-title">Development <span class="highlight">Tools</span></h2>
+                <p class="section-subtitle">Modern tools and technologies we use in our process</p>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-card animate-on-scroll">
+                    <div class="tool-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h4>GitHub</h4>
+                    <p>Version control and collaboration</p>
+                </div>
+                
+                <div class="tool-card animate-on-scroll" data-delay="0.1">
+                    <div class="tool-icon">
+                        <i class="fab fa-jira"></i>
+                    </div>
+                    <h4>Jira</h4>
+                    <p>Project management and tracking</p>
+                </div>
+                
+                <div class="tool-card animate-on-scroll" data-delay="0.2">
+                    <div class="tool-icon">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <h4>Figma</h4>
+                    <p>UI/UX design and prototyping</p>
+                </div>
+                
+                <div class="tool-card animate-on-scroll" data-delay="0.3">
+                    <div class="tool-icon">
+                        <i class="fas fa-docker"></i>
+                    </div>
+                    <h4>Docker</h4>
+                    <p>Containerization and deployment</p>
+                </div>
+                
+                <div class="tool-card animate-on-scroll" data-delay="0.4">
+                    <div class="tool-icon">
+                        <i class="fab fa-jenkins"></i>
+                    </div>
+                    <h4>Jenkins</h4>
+                    <p>Continuous integration</p>
+                </div>
+                
+                <div class="tool-card animate-on-scroll" data-delay="0.5">
+                    <div class="tool-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>New Relic</h4>
+                    <p>Performance monitoring</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Assurance -->
+    <section class="qa-section">
+        <div class="container">
+            <div class="section-header text-center animate-on-scroll">
+                <h2 class="section-title">Quality <span class="highlight">Assurance</span></h2>
+                <p class="section-subtitle">Rigorous testing at every stage of development</p>
+            </div>
+            
+            <div class="qa-grid">
+                <div class="qa-card animate-on-scroll">
+                    <div class="qa-number">99%</div>
+                    <h3>Code Coverage</h3>
+                    <p>Comprehensive automated test coverage ensures code reliability</p>
+                </div>
+                
+                <div class="qa-card animate-on-scroll" data-delay="0.1">
+                    <div class="qa-number">100+</div>
+                    <h3>Test Cases</h3>
+                    <p>Extensive test scenarios covering all functional requirements</p>
+                </div>
+                
+                <div class="qa-card animate-on-scroll" data-delay="0.2">
+                    <div class="qa-number">24/7</div>
+                    <h3>Monitoring</h3>
+                    <p>Continuous performance and security monitoring</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header text-center animate-on-scroll">
+                <h2 class="section-title">Project <span class="highlight">Timeline</span></h2>
+                <p class="section-subtitle">Typical timeline for a medium-sized web application</p>
+            </div>
+            
+            <div class="timeline-visual">
+                <div class="timeline-milestone animate-on-scroll">
+                    <div class="milestone-dot"></div>
+                    <div class="milestone-content">
+                        <h4>Week 1-2</h4>
+                        <p>Discovery & Planning</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-milestone animate-on-scroll" data-delay="0.1">
+                    <div class="milestone-dot"></div>
+                    <div class="milestone-content">
+                        <h4>Week 3-5</h4>
+                        <p>Design & Prototyping</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-milestone animate-on-scroll" data-delay="0.2">
+                    <div class="milestone-dot"></div>
+                    <div class="milestone-content">
+                        <h4>Week 6-13</h4>
+                        <p>Development & Testing</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-milestone animate-on-scroll" data-delay="0.3">
+                    <div class="milestone-dot"></div>
+                    <div class="milestone-content">
+                        <h4>Week 14</h4>
+                        <p>Deployment & Launch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-process">
+        <div class="container">
+            <div class="cta-content text-center animate-on-scroll">
+                <h2 class="cta-title">Ready to Start Your Project?</h2>
+                <p class="cta-subtitle">Let's follow our proven process to build your next successful digital solution</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-light">
+                        <span>Start Project</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light">
+                        <span>Schedule Call</span>
+                        <i class="fas fa-calendar-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" style="height: 40px; margin-right: 10px; border-radius: 5px;">
+                        <span class="logo-text">NexGenAiTech</span>
+                    </a>
+                    <p class="footer-about">Building Intelligent Digital Solutions for the Future. Empowering businesses through AI-driven innovation.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/nexgenaitech-jahid-ansari-99baa234a?trk=contact-info" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Vb5YI1bJP213jsWV9w01" target="_blank" aria-label="WhatsApp Channel"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/nexgenaitech_official" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61587253195088&sk=directory_links" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#ai">AI Development</a></li>
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#mobile">Mobile Apps</a></li>
+                        <li><a href="services.html#saas">SaaS Solutions</a></li>
+                        <li><a href="services.html#ui">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>nexgenaitech7@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8055698328</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kushinagar, Uttar Pradesh, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexGenAiTech. All rights reserved. | Founded by Jahid Ansari</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Quick Contact -->
+    <div class="quick-contact">
+        <a href="https://wa.me/918055698328" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+918055698328" class="call-btn" aria-label="Call us">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        // Process step animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const processSteps = document.querySelectorAll('.process-step');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.getAttribute('data-delay') || '0';
+                        setTimeout(() => {
+                            entry.target.classList.add('animated');
+                        }, parseFloat(delay) * 1000);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            processSteps.forEach(step => observer.observe(step));
+        });
+    </script>
+</body>
+</html>

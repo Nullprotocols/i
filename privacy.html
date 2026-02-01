@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | NexGenAiTech - Data Protection & Security</title>
+    <meta name="description" content="NexGenAiTech Privacy Policy. Learn how we collect, use, and protect your personal information when using our services.">
+    <meta name="keywords" content="Privacy Policy, Data Protection, GDPR, Personal Data Security, Cookie Policy">
+    <meta name="author" content="Jahid Ansari - NexGenAiTech">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nexgenaitech.online/privacy.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Privacy Policy | NexGenAiTech">
+    <meta property="og:description" content="How we protect and use your personal data">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nexgenaitech.online/privacy.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacy Policy - NexGenAiTech">
+    <meta name="twitter:description" content="Data protection and privacy practices">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Privacy Policy",
+        "description": "Privacy policy for NexGenAiTech services",
+        "publisher": {
+            "@type": "Organization",
+            "name": "NexGenAiTech"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Page Specific CSS -->
+    <style>
+        .policy-hero {
+            background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(0,77,153,0.1) 100%);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .policy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,50 Q25,25 50,50 T100,50" stroke="%230066cc" stroke-width="0.5" fill="none" opacity="0.1"/></svg>') repeat;
+        }
+        
+        .policy-container {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        
+        .policy-section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: var(--dark-gray);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .policy-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .policy-section h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .policy-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: var(--light-gray);
+        }
+        
+        .policy-list {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .policy-list li {
+            margin-bottom: 12px;
+            color: var(--light-gray);
+            line-height: 1.6;
+        }
+        
+        .policy-list li strong {
+            color: var(--white);
+        }
+        
+        .policy-table {
+            width: 100%;
+            margin: 25px 0;
+            border-collapse: collapse;
+            background: var(--dark-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .policy-table th {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .policy-table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: var(--light-gray);
+        }
+        
+        .policy-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .update-date {
+            background: rgba(0,102,204,0.1);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 40px 0;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .contact-info-box {
+            background: var(--dark-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-top: 30px;
+            border: 1px solid rgba(0,102,204,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .policy-hero {
+                padding: 80px 0;
+            }
+            
+            .policy-section {
+                padding: 25px 20px;
+            }
+            
+            .policy-container {
+                margin: 50px auto;
+            }
+            
+            .policy-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .policy-section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="logo-pulse">
+                <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" style="width: 80px; height: 80px; border-radius: 50%;">
+            </div>
+            <h3 class="preloader-text">NexGenAiTech</h3>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" class="logo-img">
+                    <span class="logo-text">NexGenAiTech</span>
+                </a>
+                
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="industries.html" class="nav-link">Industries</a></li>
+                        <li class="nav-item"><a href="process.html" class="nav-link">Process</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <a href="contact.html" class="nav-cta">Get Quote</a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Policy Hero -->
+    <section class="policy-hero">
+        <div class="container">
+            <div class="page-hero-content animate-on-scroll">
+                <h1 class="page-title">Privacy <span class="highlight">Policy</span></h1>
+                <p class="page-subtitle">Your privacy is important to us. Learn how we collect, use, and protect your information.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Privacy Policy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="section-padding">
+        <div class="policy-container">
+            <div class="update-date animate-on-scroll">
+                <p><strong>Last Updated:</strong> January 1, 2026</p>
+                <p>This Privacy Policy describes how NexGenAiTech ("we", "us", or "our") collects, uses, and shares your personal information when you use our website and services.</p>
+            </div>
+            
+            <div class="policy-section animate-on-scroll">
+                <h2>1. Information We Collect</h2>
+                <p>We collect several types of information for various purposes to provide and improve our services to you.</p>
+                
+                <h3>Personal Data</h3>
+                <p>While using our services, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). This may include:</p>
+                <ul class="policy-list">
+                    <li><strong>Name and contact information:</strong> Email address, phone number, company name</li>
+                    <li><strong>Project information:</strong> Project requirements, budget, timeline</li>
+                    <li><strong>Business information:</strong> Company size, industry, goals</li>
+                    <li><strong>Communication data:</strong> Correspondence through email, contact forms, or chat</li>
+                </ul>
+                
+                <h3>Usage Data</h3>
+                <p>We may also collect information on how our website is accessed and used ("Usage Data"). This Usage Data may include:</p>
+                <ul class="policy-list">
+                    <li>Your computer's Internet Protocol address (IP address)</li>
+                    <li>Browser type and version</li>
+                    <li>Pages of our website that you visit</li>
+                    <li>Time and date of your visit</li>
+                    <li>Time spent on those pages</li>
+                    <li>Other diagnostic data</li>
+                </ul>
+            </div>
+            
+            <div class="policy-section animate-on-scroll" data-delay="0.1">
+                <h2>2. How We Use Your Information</h2>
+                <p>NexGenAiTech uses the collected data for various purposes:</p>
+                
+                <table class="policy-table">
+                    <thead>
+                        <tr>
+                            <th>Purpose</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>To provide and maintain our services</td>
+                            <td>Delivering the AI and development services you request</td>
+                        </tr>
+                        <tr>
+                            <td>To communicate with you</td>
+                            <td>Responding to inquiries, providing updates, and customer support</td>
+                        </tr>
+                        <tr>
+                            <td>To process projects</td>
+                            <td>Managing project requirements, timelines, and deliverables</td>
+                        </tr>
+                        <tr>
+                            <td>To improve our services</td>
+                            <td>Analyzing usage patterns to enhance user experience</td>
+                        </tr>
+                        <tr>
+                            <td>Marketing and promotions</td>
+                            <td>Sending newsletters or promotional materials (with your consent)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="policy-section animate-on-scroll" data-delay="0.2">
+                <h2>3. Data Protection & Security</h2>
+                <p>The security of your data is important to us. We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+                
+                <h3>Security Measures Include:</h3>
+                <ul class="policy-list">
+                    <li>Encryption of sensitive data in transit and at rest</li>
+                    <li>Regular security assessments and vulnerability testing</li>
+                    <li>Access controls and authentication mechanisms</li>
+                    <li>Secure data storage with reputable cloud providers</li>
+                    <li>Regular backups and disaster recovery procedures</li>
+                </ul>
+                
+                <p>However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+            </div>
+            
+            <div class="policy-section animate-on-scroll" data-delay="0.3">
+                <h2>4. Cookies and Tracking Technologies</h2>
+                <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information.</p>
+                
+                <h3>Types of Cookies We Use:</h3>
+                <ul class="policy-list">
+                    <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
+                    <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website</li>
+                    <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
+                </ul>
+                
+                <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
+            </div>
+            
+            <div class="policy-section animate-on-scroll" data-delay="0.4">
+                <h2>5. Your Data Protection Rights</h2>
+                <p>Depending on your location, you may have certain rights regarding your personal information:</p>
+                
+                <ul class="policy-list">
+                    <li><strong>Right to Access:</strong> Request copies of your personal data</li>
+                    <li><strong>Right to Rectification:</strong> Request correction of inaccurate information</li>
+                    <li><strong>Right to Erasure:</strong> Request deletion of your personal data</li>
+                    <li><strong>Right to Restrict Processing:</strong> Request restriction of processing your data</li>
+                    <li><strong>Right to Data Portability:</strong> Request transfer of your data to another organization</li>
+                    <li><strong>Right to Object:</strong> Object to our processing of your personal data</li>
+                </ul>
+                
+                <p>To exercise any of these rights, please contact us using the information provided below.</p>
+            </div>
+            
+            <div class="policy-section animate-on-scroll" data-delay="0.5">
+                <h2>6. Third-Party Services</h2>
+                <p>We may employ third-party companies and individuals to facilitate our services ("Service Providers"), provide services on our behalf, or assist us in analyzing how our services are used.</p>
+                
+                <p>These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+                
+                <h3>Third-Party Services We Use:</h3>
+                <ul class="policy-list">
+                    <li><strong>Google Analytics:</strong> Website traffic analysis</li>
+                    <li><strong>Email Service Providers:</strong> For communication and newsletters</li>
+                    <li><strong>Cloud Hosting Providers:</strong> For data storage and processing</li>
+                    <li><strong>Payment Processors:</strong> For handling transactions (when applicable)</li>
+                </ul>
+            </div>
+            
+            <div class="policy-section animate-on-scroll" data-delay="0.6">
+                <h2>7. Data Retention</h2>
+                <p>We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.</p>
+                
+                <p>Usage Data is generally retained for a shorter period, except when this data is used to strengthen the security or to improve the functionality of our services, or we are legally obligated to retain this data for longer periods.</p>
+            </div>
+            
+            <div class="policy-section animate-on-scroll" data-delay="0.7">
+                <h2>8. Children's Privacy</h2>
+                <p>Our services are not intended for individuals under the age of 18 ("Children"). We do not knowingly collect personally identifiable information from anyone under the age of 18.</p>
+                
+                <p>If you are a parent or guardian and you are aware that your child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</p>
+            </div>
+            
+            <div class="policy-section animate-on-scroll" data-delay="0.8">
+                <h2>9. Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                
+                <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+            </div>
+            
+            <div class="contact-info-box animate-on-scroll" data-delay="0.9">
+                <h2>10. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                
+                <div class="contact-details" style="margin-top: 20px;">
+                    <p><strong>Email:</strong> <a href="mailto:nexgenaitech7@gmail.com">nexgenaitech7@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+918055698328">+91 8055698328</a></p>
+                    <p><strong>Address:</strong> Kushinagar, Uttar Pradesh, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg" alt="NexGenAiTech Logo" style="width: 40px; height: 40px; border-radius: 50%;">
+                        <span class="logo-text">NexGenAiTech</span>
+                    </a>
+                    <p class="footer-about">Building Intelligent Digital Solutions for the Future. Empowering businesses through AI-driven innovation.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/nexgenaitech-jahid-ansari-99baa234a?trk=contact-info" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61587253195088&sk=directory_links" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/nexgenaitech_official" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Vb5YI1bJP213jsWV9w01" target="_blank" aria-label="WhatsApp Channel"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#ai-service">AI Development</a></li>
+                        <li><a href="services.html#web-service">Web Development</a></li>
+                        <li><a href="services.html#mobile-service">Mobile Apps</a></li>
+                        <li><a href="services.html#saas">SaaS Solutions</a></li>
+                        <li><a href="services.html#ui">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexGenAiTech. All rights reserved. | Founded by Jahid Ansari</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Quick Contact -->
+    <div class="quick-contact">
+        <a href="https://wa.me/918055698328" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+918055698328" class="call-btn" aria-label="Call us">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
