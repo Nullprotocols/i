@@ -148,7 +148,7 @@ function getFormInteractions() {
 }
 
 async function sendToGoogleSheets(data, sheetType) {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwN9m6GmGDmBHqFMgIGuNsU2v_NskC1exYxQoqKj9Y2NjxVR5EqQmlhG5qVKq0AGgQ6/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwLPOPcYB8RpObXGG88Qja_j89LeMvaC5f2euzRceBngkVtvhKGu8IP-KQjX-bH2BrJ/exec';
     
     try {
         const payload = {
